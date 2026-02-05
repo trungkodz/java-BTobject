@@ -1,0 +1,33 @@
+- Trong sơ đồ dấu - trước tên nghĩa là private
+=====================================================================================================
+- Quan hệ Aggregation( hình thoi ):
+	+ trong class student ta khai báo (address ha, sa): đây là cách thể hiện quan hệ "has-a", sinh viên có một địa chỉ, địa chỉ đó là một đối tượng riên đc tạo ở class riêng và truyền vào;
+	+ khái niệm "has-a": nếu một class có tham chiếu đến một thực thể khác đói gọi là quan hệ has-a (vd: Student có quan hệ has-a Address), cách này ta định nghĩa address là một class riêng tăng tính tái sử dụng code vì các class dùng chung một thuộc tính nên ta tách nó ra.
+	+ has-a khác kế thừa: kế thừa là các class con sử dụng lại các thuộc tính và method của lớp cha có sẵn
+		* has-a là đặt những điểm chung ra riêng và import vào các class khác để dùng.
+		* vậy nên 2 class độc lập với nhau
+=====================================================================================================
+- @Override : dùng để ghi đè lại phương thức của lớp cha
+	+ Tại sao lại cần @Override trong bài07: vì trong java tất cả class tạo ra đều là class con của class java.lang.Object, ngay cả khi ko dùng extend. Và trong class gốc đó các kỹ sư đã viết sẵn một method toString() in ra tên class+ địa chỉ bộ nhớ. vậy nên ta phải dùng @Override để viết lại nếu muốn dùng hàm toString().
+=====================================================================================================
+- Tại sao dùng tostring() lại ko đc: vì java có một quy ước cứng(hard-coded) bên trong mã nguồn
+	+ khi viết dòng lệnh System.out.println(st1); thì thực tế đoạn code được sử lí ẩn như sau:
+
+=====================================================================================================
+		* // Code giả lập bên trong thư viện Java
+		public void println(Object x) {
+    			// Java kiểm tra: Nếu x là null thì in chữ "null"
+    			if (x == null) {
+        			print("null");
+    			} else {
+        			// ĐÂY LÀ DÒNG QUAN TRỌNG NHẤT:
+        			// Các kỹ sư đã viết cứng lệnh gọi hàm .toString()
+       				String chuoiCanIn = x.toString(); 
+        			print(chuoiCanIn);
+    			}
+		}
+=======================================================================================================
+	+ tại sao: để in ra nó quy ước là phải có một hàm toString() để gọi nếu ko có sẽ gọi của cha. Vậy nên nếu viết tostring() thì nó chỉ là một hàm bình thường và hệ thống ko tự động gọi
+	+ vì vậy bạn phải tự gọi.
+
+=======================================================================================================
