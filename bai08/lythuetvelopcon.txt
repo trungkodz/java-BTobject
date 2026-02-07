@@ -1,0 +1,18 @@
+- Biến super(): là một biến tham chiếu được sử dụng bởi lớp con để tham chiếu tới Object của lớp cha
+	+ nó thường được dùng để giải quyết các vấn đề liên quan đặt tên trùng nhau hoặc để tái sử dụng mã nguồn của lớp cha
+
+	=======================================================================================================================
+	+ dùng super(): để gọi biến của lớp cha, khi lớp con và lớp cha có cùng tên thuộc tính thì khi ở lớp con mà muốn khai báo thuộc tính lớp cha thì dùng super.<têntrùng>
+
+	=======================================================================================================================
+	+ dùng super(): dùng để gọi lại method của lớp cha. trong trường hợp ghi đè nhưng vẫn muốn dữ lại một phần logic của lớp cha thì dùng super.<method cha> để gọi. việc này giúp tránh lặp code, khi này nếu quy trình method cơ bản thay đổi, bạn chỉ cần sửa ở lớp cha, lớp con sẽ tự cập nhật theo.
+
+	=======================================================================================================================
+	+ dùng super(): để gọi constructor(hàm khởi tạo) của lớp cha. khi một đối tượng của lớp con được tạo ra Constructor của lớp cha phải được chạy trước để khởi tạo thuộc tính thừa hưởng, sau đó mới đến constructor của lớp con.
+		* Tự động: nếu bạn ko viết gì thì máy tính sẽ tự chèn super() không tham số vào constructor vào dòng đầu của lớp con
+		* Thủ công: nếu constructor của lớp cha có tham số bắt buộc phải gọi super(tham số) để thừa hưởng từ lớp cha.
+
+	=======================================================================================================================
+	+ khác với this: với this ta tham chiếu tới lớp hiện tại
+		* this.bien(bien cua lop hien tai)
+		* this() gọi constructor khác cùng lớp
