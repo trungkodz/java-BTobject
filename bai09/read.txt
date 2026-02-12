@@ -1,0 +1,1 @@
+nếu ta rùng arraylist và tương tác với hàm rỗng cụ thể là gọi pt mà trong hàm rỗng, lúc đấy sẽ lỗi

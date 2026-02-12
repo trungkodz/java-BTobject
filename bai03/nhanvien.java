@@ -58,18 +58,19 @@ public class nhanvien {
 
     public double getluong() {
         if (covuatchuan() == false) {
-            return soSP * 20000;
+            return soSP * 200;
         } else {
-            return ((soSP - 500) * 30000) + (soSP * 20000);
+            return ((soSP - 500) * 300) + (soSP * 200); // giảm bớt 2 số 0 cho số đỡ to
         }
 
     }
 
     public static void xuattieude() {
         System.out.printf("%-10s %-15s %-15s %-15s %n",
-                "Mã NV", "Số SP", "Lương", "Tổng Kết");
+                "Ma NV", "So SP", "Luong", "Tong Ket");
     }
 
+    @Override
     public String toString() {
         return String.format("%-10s %-15d %-15.0f %-15s", this.maNV, this.soSP, getluong(), gettongket());
     }
