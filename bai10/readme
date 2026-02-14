@@ -1,0 +1,11 @@
+- trong tư duy hướng đối tượng lỗi (Exception) cũng là một đối tượng(Object)
+    + khi trương trình gặp sự cố, java sẽ ném (throw) ra một đối tượng lỗi
+    + ta dùng try_catch để bắt lấy lỗi đó và sử lý để truong trình ko sập(crash)
+    + trong (Exception e) e là đối tượng chứa thông tin về lỗi đó
+    + catch chỉ chạy khi trong try sảy ra lỗi
+    + finally trong đây code luôn chạy dù có lỗi hay ko
+
+- lấy giá trị tham số class cha qua phương thức (vd: return "x = " + getx())
+- dùng thư viện import java.text.DecimalFormat để lấy số xác định sau dấu ,
+    + DecimalFormat df = new DecimalFormat("#.00") lấy kết quả 2 số sau ,
+    + System.out.println("diameter = " + df.format(mc.get(i).getdeameter()))
