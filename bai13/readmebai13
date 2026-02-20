@@ -1,0 +1,8 @@
+- #GeometricObject() tạo một hàm khởi tạo với phạm vi truy cập là protected
+- trong chuẩn UML chữ in nghiêng biểu thị cho phương thức trừu tượng (abstract method)
+- thư viện java.util.Date lưu thông tin ngày tháng năm
+- lớp con bắt buọc phải viết lại phương thức trừu tượng cảu lớp cha
+- từ khóa static (tĩnh) chia mọi thứ thành 2 nửa rõ ràng
+    +của Class (có static): Những hàm có chữ static (như hàm main) thuộc về bản thân cái Lớp đó. Nó tồn tại ngay từ lúc chương trình vừa chạy, không cần ai phải dùng lệnh new để tạo ra nó cả. Vì Java cần một điểm bắt đầu chương trình ngay lập tức, nên hàm main bắt buộc phải là static.
+
+    +của Object (Không có static): Những hàm bình thường (như hàm sosanh ) thuộc về Đối tượng. Nó chỉ được sinh ra và cho phép sử dụng sau khi bạn đã tạo một đối tượng bằng lệnh new (ví dụ: TestGeometricObject obj = new TestGeometricObject();)
